@@ -49,6 +49,18 @@ const projects: Project[] = [
     badge: 'New Design',
     demoUrl: 'https://brewandbaker.vercel.app/',
   },
+  {
+    title: 'Beauty & Spa Center',
+    category: 'Beauty & Wellness',
+    description:
+      'A serene, elegant layout with soft imagery and a calming color palette. Features service menus, online booking, and treatment galleries — perfect for spas, salons, and wellness centers.',
+    tags: ['Spa', 'Online Booking', 'Services', 'Gallery'],
+    image:
+      'https://images.pexels.com/photos/6899554/pexels-photo-6899554.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    accent: 'from-pink-500 to-rose-600',
+    badge: 'Latest',
+    demoUrl: 'https://beautyspa-tau.vercel.app/',
+  },
 ];
 
 function ProjectCard({ project, index }: { project: Project; index: number }) {
