@@ -1,8 +1,9 @@
 import { ArrowUpRight, Tag } from 'lucide-react';
 import { useReveal } from '@/hooks/useReveal';
 
-interface Template {
+interface Project {
   title: string;
+  category: string;
   description: string;
   tags: string[];
   image: string;
@@ -11,12 +12,13 @@ interface Template {
   demoUrl: string;
 }
 
-const templates: Template[] = [
+const projects: Project[] = [
   {
     title: 'Burger & Fast Food Joint',
+    category: 'Restaurant',
     description:
-      'A bold, appetite-driven layout with vibrant food photography, combo deals, and one-tap WhatsApp ordering. Perfect for burger spots and quick-service restaurants.',
-    tags: ['Fast Food', 'Combos', 'Delivery', 'QR Menu'],
+      'A bold, appetite-driven layout with vibrant food photography, combo deals, and one-tap WhatsApp ordering. Perfect for quick-service restaurants.',
+    tags: ['Food', 'WhatsApp Order', 'Delivery', 'QR Menu'],
     image:
       'https://images.pexels.com/photos/5374420/pexels-photo-5374420.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
     accent: 'from-primary-500 to-primary-600',
@@ -24,10 +26,11 @@ const templates: Template[] = [
     demoUrl: 'https://goodfood-54j.pages.dev/',
   },
   {
-    title: 'Traditional Oriental Grill',
+    title: 'Traditional Grill Restaurant',
+    category: 'Restaurant',
     description:
       'A warm, authentic design inspired by traditional cuisine. Showcases grilled meats, mezze platters, and family-style sharing menus with bilingual support.',
-    tags: ['Grill', 'Bilingual', 'Family Menu', 'Reservations'],
+    tags: ['Food', 'Bilingual', 'Reservations', 'Gallery'],
     image:
       'https://images.pexels.com/photos/6419720/pexels-photo-6419720.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
     accent: 'from-amber-500 to-amber-700',
@@ -36,9 +39,10 @@ const templates: Template[] = [
   },
   {
     title: 'Cozy Coffee Shop',
+    category: 'Cafe',
     description:
       'A clean, minimal aesthetic with soft tones and elegant typography. Ideal for cafes serving specialty coffee, pastries, and breakfast — with a loyalty stamp card built in.',
-    tags: ['Coffee', 'Breakfast', 'Loyalty Card', 'Takeaway'],
+    tags: ['Cafe', 'Loyalty Card', 'Takeaway', 'Menu'],
     image:
       'https://images.pexels.com/photos/23879458/pexels-photo-23879458.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
     accent: 'from-accent-500 to-accent-600',
@@ -47,7 +51,7 @@ const templates: Template[] = [
   },
 ];
 
-function TemplateCard({ template, index }: { template: Template; index: number }) {
+function ProjectCard({ project, index }: { project: Project; index: number }) {
   const { ref, visible } = useReveal<HTMLDivElement>();
 
   return (
@@ -61,34 +65,41 @@ function TemplateCard({ template, index }: { template: Template; index: number }
       {/* Image */}
       <div className="relative h-56 overflow-hidden">
         <img
-          src={template.image}
-          alt={template.title}
+          src={project.image}
+          alt={project.title}
           className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
 
         {/* Badge */}
         <div className="absolute left-4 top-4">
-          <span className={`inline-flex rounded-full bg-gradient-to-r ${template.accent} px-3 py-1 text-xs font-bold text-white shadow-lg`}>
-            {template.badge}
+          <span className={`inline-flex rounded-full bg-gradient-to-r ${project.accent} px-3 py-1 text-xs font-bold text-white shadow-lg`}>
+            {project.badge}
+          </span>
+        </div>
+
+        {/* Category */}
+        <div className="absolute right-4 top-4">
+          <span className="rounded-full bg-black/30 px-3 py-1 text-xs font-medium text-white backdrop-blur-sm">
+            {project.category}
           </span>
         </div>
 
         {/* Title overlay */}
         <div className="absolute bottom-0 left-0 right-0 p-5">
-          <h3 className="font-display text-xl font-bold text-white">{template.title}</h3>
+          <h3 className="font-display text-xl font-bold text-white">{project.title}</h3>
         </div>
       </div>
 
       {/* Body */}
       <div className="flex flex-1 flex-col p-5">
         <p className="text-sm leading-relaxed text-ink-600 dark:text-ink-300">
-          {template.description}
+          {project.description}
         </p>
 
         {/* Tags */}
         <div className="mt-4 flex flex-wrap gap-2">
-          {template.tags.map((tag) => (
+          {project.tags.map((tag) => (
             <span
               key={tag}
               className="inline-flex items-center gap-1 rounded-lg bg-ink-100 px-2.5 py-1 text-xs font-medium text-ink-600 dark:bg-ink-800 dark:text-ink-300"
@@ -101,7 +112,7 @@ function TemplateCard({ template, index }: { template: Template; index: number }
 
         {/* CTA */}
         <a
-          href={template.demoUrl}
+          href={project.demoUrl}
           target="_blank"
           rel="noopener noreferrer"
           className="mt-5 inline-flex items-center justify-between gap-2 rounded-xl border border-ink-200 px-4 py-3 text-sm font-semibold text-ink-800 transition-all hover:border-primary-400 hover:bg-primary-50 hover:text-primary-700 dark:border-ink-700 dark:text-ink-100 dark:hover:border-primary-600 dark:hover:bg-primary-950/40 dark:hover:text-primary-300"
@@ -128,22 +139,29 @@ export default function Templates() {
           }`}
         >
           <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-ink-200 bg-ink-50 px-4 py-1.5 text-sm font-medium text-ink-600 dark:border-ink-700 dark:bg-ink-800/50 dark:text-ink-300">
-            Template Showcase
+            Portfolio
           </div>
           <h2 className="font-display text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
-            Three designs. Endless possibilities.
+            Selected work & live demos
           </h2>
           <p className="mt-4 text-lg text-ink-600 dark:text-ink-300">
-            Every restaurant is unique. These demos show just a few directions — your site will be custom-built
-            to match your brand, your menu, and your vibe.
+            Every business is unique. These live demos show just a few directions — your site will be
+            custom-built to match your brand, your goals, and your audience.
           </p>
         </div>
 
         {/* Grid */}
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {templates.map((tpl, i) => (
-            <TemplateCard key={tpl.title} template={tpl} index={i} />
+          {projects.map((project, i) => (
+            <ProjectCard key={project.title} project={project} index={i} />
           ))}
+        </div>
+
+        {/* Note */}
+        <div className="mt-12 text-center">
+          <p className="text-sm text-ink-500 dark:text-ink-400">
+            These are just the beginning — I build for restaurants, clinics, salons, gyms, shops, agencies, and more.
+          </p>
         </div>
       </div>
     </section>

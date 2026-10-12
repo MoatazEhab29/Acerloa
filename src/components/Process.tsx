@@ -5,13 +5,13 @@ const steps = [
   {
     icon: MessageSquare,
     title: 'We Chat',
-    description: 'A quick WhatsApp call to understand your restaurant, your menu, and your vision. I ask the right questions and listen.',
+    description: 'A quick call or WhatsApp conversation to understand your business, your goals, and your vision. I ask the right questions and listen.',
     duration: 'Day 1',
   },
   {
     icon: Palette,
     title: 'I Design & Build',
-    description: 'Within days, you get a custom-designed, fully functional website with your real menu, photos, and WhatsApp ordering — ready to preview.',
+    description: 'Within days, you get a custom-designed, fully functional website with your real content, photos, and integrations — ready to preview.',
     duration: 'Days 2-5',
   },
   {

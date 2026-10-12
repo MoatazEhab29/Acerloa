@@ -1,9 +1,9 @@
-import { MessageCircle, Mail, MapPin, UtensilsCrossed, Phone } from 'lucide-react';
+import { MessageCircle, Mail, MapPin, Code2, Phone } from 'lucide-react';
 import { useReveal } from '@/hooks/useReveal';
 
 const WHATSAPP_NUMBER = '201552193602';
 const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-  "Hi! I'm interested in a website for my restaurant. Can you tell me more?",
+  "Hi! I'm interested in a website for my business. Can you tell me more?",
 )}`;
 
 export default function Contact() {
@@ -38,13 +38,13 @@ export default function Contact() {
             <div>
               <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-1.5 text-sm font-medium text-white/90">
                 <MessageCircle className="h-4 w-4 text-whatsapp" />
-                Let's build your restaurant's website
+                Let's build your business website
               </div>
               <h2 className="font-display text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl">
-                Ready to get your menu online?
+                Ready to get your business online?
               </h2>
               <p className="mt-4 max-w-lg text-lg text-ink-300">
-                Send me a message on WhatsApp and let's talk about your restaurant. Free consultation,
+                Send me a message on WhatsApp and let's talk about your project. Free consultation,
                 no obligation. I reply within a few hours.
               </p>
 
@@ -101,7 +101,7 @@ export default function Contact() {
         <div className="flex flex-col items-center justify-between gap-6 border-t border-ink-200 py-10 dark:border-ink-800 sm:flex-row">
           <div className="flex items-center gap-2.5 font-display text-lg font-bold tracking-tight">
             <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-primary-500 text-white">
-              <UtensilsCrossed className="h-5 w-5" strokeWidth={2.5} />
+              <Code2 className="h-5 w-5" strokeWidth={2.5} />
             </span>
             <span>
               Acerola
@@ -109,7 +109,7 @@ export default function Contact() {
           </div>
 
           <div className="flex items-center gap-6 text-sm text-ink-500 dark:text-ink-400">
-            <a href="#templates" className="transition-colors hover:text-primary-500">Templates</a>
+            <a href="#templates" className="transition-colors hover:text-primary-500">Portfolio</a>
             <a href="#features" className="transition-colors hover:text-primary-500">Features</a>
             <a href="#process" className="transition-colors hover:text-primary-500">Process</a>
             <a href="#contact" className="transition-colors hover:text-primary-500">Contact</a>

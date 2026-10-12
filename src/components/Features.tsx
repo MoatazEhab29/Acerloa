@@ -13,39 +13,39 @@ const features: Feature[] = [
     icon: Smartphone,
     title: 'Mobile-First Design',
     description:
-      '90% of your customers browse on their phones. Every site I build looks stunning on small screens first, then scales up beautifully to tablets and desktops.',
+      'Most of your visitors browse on their phones. Every site I build looks stunning on small screens first, then scales up beautifully to tablets and desktops.',
     highlight: true,
   },
   {
     icon: Zap,
     title: 'Lightning-Fast Loading',
     description:
-      'Sites load in under a second. No bloated frameworks, no slow plugins — just clean, optimized code that keeps hungry visitors from bouncing.',
+      'Sites load in under a second. No bloated frameworks, no slow plugins — just clean, optimized code that keeps visitors from bouncing.',
   },
   {
     icon: MessageCircle,
-    title: 'WhatsApp Ordering Built-In',
+    title: 'WhatsApp Integration',
     description:
-      'Customers browse your menu and send their order straight to your WhatsApp with one tap. No app to download, no commission to pay, no middleman.',
+      'Connect with customers directly. Add WhatsApp chat, booking, or order buttons so visitors can reach you with one tap — no app or middleman required.',
     highlight: true,
   },
   {
     icon: Search,
     title: 'SEO & Google Ready',
     description:
-      'Your restaurant shows up when people search "restaurants near me" in your area. Built with proper metadata, structured data, and local SEO best practices.',
+      'Your business shows up when people search for what you offer. Built with proper metadata, structured data, and local SEO best practices.',
   },
   {
     icon: Palette,
     title: 'Custom Branding',
     description:
-      'Your colors, your logo, your personality. Nothing cookie-cutter — each design is crafted from scratch to match your restaurant\'s unique atmosphere.',
+      'Your colors, your logo, your personality. Nothing cookie-cutter — each design is crafted from scratch to match your business\'s unique identity.',
   },
   {
     icon: BarChart3,
     title: 'Analytics Dashboard',
     description:
-      'See how many people visit your menu, what they click, and when they order. Simple, actionable insights — no data science degree required.',
+      'See how many people visit your site, what they click, and where they come from. Simple, actionable insights — no data science degree required.',
   },
 ];
 
@@ -107,11 +107,11 @@ export default function Features() {
             Why Choose Acerola
           </div>
           <h2 className="font-display text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
-            Everything your restaurant needs to go digital
+            Everything your business needs to stand out online
           </h2>
           <p className="mt-4 text-lg text-ink-600 dark:text-ink-300">
             No expensive platforms, no recurring fees, no complexity.
-            Just a beautiful website that brings in more orders.
+            Just a beautiful website that works hard for your business.
           </p>
         </div>
 

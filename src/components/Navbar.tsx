@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Menu, X, Moon, Sun, UtensilsCrossed } from 'lucide-react';
+import { Menu, X, Moon, Sun, Code2 } from 'lucide-react';
 
 interface NavbarProps {
   isDark: boolean;
@@ -7,7 +7,7 @@ interface NavbarProps {
 }
 
 const links = [
-  { label: 'Templates', href: '#templates' },
+  { label: 'Portfolio', href: '#templates' },
   { label: 'Features', href: '#features' },
   { label: 'Process', href: '#process' },
   { label: 'Contact', href: '#contact' },
@@ -35,7 +35,7 @@ export default function Navbar({ isDark, toggleDark }: NavbarProps) {
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 sm:px-8">
         <a href="#home" className="flex items-center gap-2.5 font-display text-lg font-bold tracking-tight">
           <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-primary-500 text-white shadow-lg shadow-primary-500/30">
-            <UtensilsCrossed className="h-5 w-5" strokeWidth={2.5} />
+            <Code2 className="h-5 w-5" strokeWidth={2.5} />
           </span>
           <span>
             Acerola
